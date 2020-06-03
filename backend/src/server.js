@@ -1,12 +1,15 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
-const routes = require('./routes');
+const express = require("express");
+const mongoose = require("mongoose");
+const cors = require("cors");
+const routes = require("./routes");
 const server = express();
 
-mongoose.connect('mongodb+srv://omnistack:omnistack@cluster0-xtcnm.mongodb.net/omnistack?retryWrites=true&w=majority',{
-    useNewUrlParser: true
-});
+mongoose.connect(
+  "mongodb+srv://react_omniStack:react_omniStack@cluster0-a404m.mongodb.net/tindev?retryWrites=true&w=majority",
+  {
+    useNewUrlParser: true,
+  }
+);
 
 server.use(cors());
 server.use(express.json());
